@@ -1,0 +1,33 @@
+:root {
+  --bg: #050506;
+  --surface: rgba(255, 255, 255, 0.025);
+  --surface-2: rgba(255, 255, 255, 0.04);
+  --hairline: rgba(255, 255, 255, 0.09);
+  --fg: #f2f0f2;
+  --fg-dim: #8c8890;
+  --accent: #ff1f4b;
+  --accent-2: #c20e30;
+  --accent-soft: rgba(255, 31, 75, 0.12);
+  --radius: 14px;
+  --maxw: 1140px;
+  --mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, monospace;
+
+  color-scheme: dark;
+  font-family: "Space Grotesk", system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--bg);
+  color: var(--fg);
+  overflow-x: hidden;
+  line-height: 1.6;
+  cursor: default;
+}
+
+a { color: inherit; text-decoration: none; }
+::selection { background: var(--accent); color: #fff; }
