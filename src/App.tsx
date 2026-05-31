@@ -35,7 +35,6 @@ const FEATURES: { id: string; title: string; body: string }[] = [
 ];
 
 const INSTALLER_URL = "https://github.com/mqyv/vault/releases/latest/download/VaultSetup.exe";
-const GUIDE_URL = "https://github.com/mqyv/vault/blob/main/INSTALL_FRIENDS.md";
 
 const STEPS: { n: string; title: string; body: string }[] = [
   { n: "01", title: "Télécharge l'installeur", body: "Un seul fichier : VaultSetup.exe." },
@@ -138,11 +137,6 @@ export default function App() {
                 </div>
               ))}
             </div>
-
-            <p className="note" data-reveal>
-              L'installeur s'occupe de tout (Git, Node, dépendances, injection). Mac/Linux ou méthode manuelle ?{" "}
-              <a href={GUIDE_URL} target="_blank" rel="noreferrer">Voir le guide ↗</a>
-            </p>
           </section>
 
           {/* CTA */}
