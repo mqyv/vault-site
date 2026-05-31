@@ -34,12 +34,12 @@ const FEATURES: { id: string; title: string; body: string }[] = [
   { id: "006", title: "Sur-mesure", body: "C'est ton cord. On ajoute plugins et fonctions custom à la demande." },
 ];
 
-const INSTALLER_URL = "/install-vault.bat";
+const INSTALLER_URL = "https://github.com/mqyv/vault/releases/latest/download/VaultSetup.exe";
 const GUIDE_URL = "https://github.com/mqyv/vault/blob/main/INSTALL_FRIENDS.md";
 
 const STEPS: { n: string; title: string; body: string }[] = [
-  { n: "01", title: "Télécharge l'installeur", body: "Un seul fichier : install-vault.bat." },
-  { n: "02", title: "Double-clique dessus", body: "Il installe tout, compile et configure Discord automatiquement." },
+  { n: "01", title: "Télécharge l'installeur", body: "Un seul fichier : VaultSetup.exe." },
+  { n: "02", title: "Lance l'assistant", body: "Suivant → Installer. Il installe tout et configure Discord automatiquement." },
   { n: "03", title: "Rouvre Discord", body: "Vault est prêt, dans tes Réglages. C'est tout." },
 ];
 
@@ -122,7 +122,7 @@ export default function App() {
               <span className="dl-icon" aria-hidden="true">↓</span>
               <span className="dl-text">
                 <strong>Télécharger Vault</strong>
-                <span>Windows · installeur automatique · ~2 min</span>
+                <span>Windows · VaultSetup.exe · assistant graphique</span>
               </span>
               <span className="dl-btn">Télécharger</span>
             </a>
