@@ -2,7 +2,7 @@ import { useEffect, useRef, type ReactNode } from "react";
 import InteractiveBackground from "./components/InteractiveBackground";
 import "./App.css";
 
-const GITHUB_URL = "#"; // TODO: remplacer par l'URL du repo Vault une fois créé
+const GITHUB_URL = "https://github.com/mqyv/vault";
 
 function useReveal() {
   const ref = useRef<HTMLDivElement>(null);
