@@ -34,11 +34,13 @@ const FEATURES: { id: string; title: string; body: string }[] = [
   { id: "006", title: "Sur-mesure", body: "C'est ton cord. On ajoute plugins et fonctions custom à la demande." },
 ];
 
-const STEPS: { n: string; title: string; code: string }[] = [
-  { n: "01", title: "Récupérer Vault", code: "git clone <url-du-repo> Vault" },
-  { n: "02", title: "Installer & compiler", code: "cd Vault\npnpm install\npnpm build" },
-  { n: "03", title: "Injecter — Discord fermé", code: "pnpm inject" },
-  { n: "04", title: "Mettre à jour", code: "pnpm update-vault" },
+const INSTALLER_URL = "/install-vault.bat";
+const GUIDE_URL = "https://github.com/mqyv/vault/blob/main/INSTALL_FRIENDS.md";
+
+const STEPS: { n: string; title: string; body: string }[] = [
+  { n: "01", title: "Télécharge l'installeur", body: "Un seul fichier : install-vault.bat." },
+  { n: "02", title: "Double-clique dessus", body: "Il installe tout, compile et configure Discord automatiquement." },
+  { n: "03", title: "Rouvre Discord", body: "Vault est prêt, dans tes Réglages. C'est tout." },
 ];
 
 function Eyebrow({ children }: { children: ReactNode }) {
@@ -113,21 +115,33 @@ export default function App() {
           <section id="install" className="section">
             <div className="section-head">
               <Eyebrow>02 / Installation</Eyebrow>
-              <h2 className="section-title" data-reveal>Quatre étapes, une fois.</h2>
+              <h2 className="section-title" data-reveal>Installe en un clic.</h2>
             </div>
+
+            <a className="download-card" href={INSTALLER_URL} download data-reveal>
+              <span className="dl-icon" aria-hidden="true">↓</span>
+              <span className="dl-text">
+                <strong>Télécharger Vault</strong>
+                <span>Windows · installeur automatique · ~2 min</span>
+              </span>
+              <span className="dl-btn">Télécharger</span>
+            </a>
+
             <div className="steps">
               {STEPS.map(s => (
                 <div className="step" data-reveal key={s.n}>
                   <span className="step-n">{s.n}</span>
                   <div className="step-body">
                     <h4>{s.title}</h4>
-                    <pre><code>{s.code}</code></pre>
+                    <p>{s.body}</p>
                   </div>
                 </div>
               ))}
             </div>
+
             <p className="note" data-reveal>
-              Prérequis — Node.js 18+, Git, pnpm <code>npm i -g pnpm</code>
+              L'installeur s'occupe de tout (Git, Node, dépendances, injection). Mac/Linux ou méthode manuelle ?{" "}
+              <a href={GUIDE_URL} target="_blank" rel="noreferrer">Voir le guide ↗</a>
             </p>
           </section>
 

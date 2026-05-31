@@ -220,12 +220,65 @@
 }
 .card:hover .card-line { width: 100%; }
 
+/* ===================== Download card ===================== */
+.download-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  max-width: 780px;
+  margin: 0 auto 26px;
+  padding: 24px 28px;
+  border: 1px solid rgba(255, 31, 75, 0.4);
+  border-radius: var(--radius);
+  background:
+    radial-gradient(80% 140% at 0% 0%, rgba(255, 31, 75, 0.12), transparent 60%),
+    var(--surface);
+  transition: transform 0.18s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+.download-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--accent);
+  box-shadow: 0 14px 50px rgba(255, 31, 75, 0.28);
+}
+.dl-icon {
+  flex: none;
+  width: 52px;
+  height: 52px;
+  display: grid;
+  place-items: center;
+  border-radius: 12px;
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 6px 24px rgba(255, 31, 75, 0.4);
+}
+.dl-text { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+.dl-text strong { font-size: 1.18rem; font-weight: 600; letter-spacing: -0.01em; }
+.dl-text span {
+  font-family: var(--mono);
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  color: var(--fg-dim);
+}
+.dl-btn {
+  flex: none;
+  padding: 12px 26px;
+  border-radius: 10px;
+  font-weight: 600;
+  color: #fff;
+  background: var(--accent);
+  box-shadow: 0 0 0 1px rgba(255, 31, 75, 0.4), 0 10px 40px rgba(255, 31, 75, 0.28);
+}
+
 /* ===================== Steps ===================== */
 .steps {
   display: grid;
   gap: 14px;
   max-width: 780px;
+  margin: 0 auto;
 }
+.step-body p { color: var(--fg-dim); font-size: 0.96rem; }
 .step {
   display: flex;
   gap: 22px;
